@@ -3,6 +3,7 @@
     <div style="background-image:url('<?php echo INCLUDE_PATH; ?>assets/img/bg_slide1.jpg')" class="banner-single"></div> <!--banner single-->
     <div style="background-image:url('<?php echo INCLUDE_PATH; ?>assets/img/bg_slide2.png')" class="banner-single"></div> <!--banner single-->
     <div style="background-image:url('<?php echo INCLUDE_PATH; ?>assets/img/bg_slide3.jpg')" class="banner-single"></div> <!--banner single-->
+
     <div class="overlay"></div>
     <!--Overlay-->
     <div class="center">
