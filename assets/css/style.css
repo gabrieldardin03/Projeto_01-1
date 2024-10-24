@@ -154,30 +154,39 @@ section.banner-principal form h2 {
 }
 
 section.banner-principal form input[type=email] {
-    width: 100%;
-    /*Largura de 100%*/
-    height: 50px;
-    /*Altura de 50px*/
+    width: 100%; /*Largura de 100%*/
+    height: 50px; /*Altura de 50px*/
     margin-top: 10px;
     background-color: white;
     color: black;
     font-size: 24px;
     padding-left: 10px;
-    border: 1px solid green;
-    /*Borda*/
+    border: 1px solid green; /*Borda*/
 }
 
 section.banner-principal form input[type=submit] {
-    width: 100%;
-    /*Largura de 100%*/
-    height: 50px;
-    /*Altura de 50px*/
+    width: 100%; /*Largura de 100%*/
+    height: 50px; /*Altura de 50px*/
     margin-top: 10px;
     background-color: rgb(75, 221, 75);
     color: white;
     font-size: 24px;
-    cursor: pointer;
-    /*Tipo do cursor do mouse*/
+    cursor: pointer; /*Tipo do cursor do mouse*/
+}
+
+/*descricao-autor*/
+section.descricao-autor{
+    padding: 30px 0; /*Espaçamento interno cima e baixo*/
+}
+
+section.descricao-autor h2{
+    font-size: 32px; /*Tamanho da fonte*/
+}
+
+section.descricao-autor p{
+    margin-top: 10px; /*Espaçamento externo cima*/
+    font-size: 18px; /*Tamanho da fonte*/
+    text-align: justify; /*Alinhamento justificado*/
 }
 
 /*Especialidades*/
@@ -309,6 +318,29 @@ footer.fixed{
     margin: 6px 0;
     padding: 8px;
     font-size: 18px;
+    background-color: rgb(75, 221, 75);
+}
+
+/*bullets*/
+.bullets{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+}
+
+.bullets span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.bullets span.active-slider{
     background-color: rgb(75, 221, 75);
 }
 

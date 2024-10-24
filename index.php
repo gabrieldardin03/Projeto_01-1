@@ -103,7 +103,7 @@
     <!--JS-->
     <script src="<?php echo INCLUDE_PATH; ?>assets/js/scripts.js"></script>
 
-    <?php if ($url == 'home' || $url == '') { ?>
+    <?php if ($url == 'home' || $url == '' || $url == 'depoimentos' || $url == 'servicos') { ?>
         <script src="<?php echo INCLUDE_PATH; ?>assets/js/slider.js"></script>
     <?php } ?>
 

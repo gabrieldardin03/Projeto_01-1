@@ -13,6 +13,11 @@
             <input type="submit" name="enviar" value="Enviar">
         </form>
     </div>
+<!--bullets-->
+<div class="bullets">
+</div>
+<!--bullets-->
+
 </section>
 <!--banner-principal-->
 
