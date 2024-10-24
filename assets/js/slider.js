@@ -32,8 +32,21 @@ $(function () {
             if (currentSlide > maxSlide)
                 currentSlide = 0;
 
-            $('.banner-single').eq(currentSlide).fadeIn(2000);
+            $('.banner-single').eq(currentSlide).fadeIn(3000);
+
+            $('.bullets span').removeClass('active-slider'); // Trocar os bullets na navegação
+            $('.bullets span').eq(currentSlide).addClass('active-slider');
         }, delay * 1000);
     }
 
+    $('body').on('click', '.bullets span', function(){
+        var currentBullet = $(this);
+
+        $('.banner-single').eq(currentSlide).fadeOut(); //Sincronizar bullets e slider
+        currentSlide = currentBullet.index();
+        $('.banner-single').eq(currentSlide).fadeIn();
+
+        $('.bullets span').removeClass('active-slider'); //Atualizando a classe do click
+        currentBullet.addClass('active-slider');
+    })  
 })
