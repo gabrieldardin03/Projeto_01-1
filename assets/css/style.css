@@ -53,31 +53,23 @@ header {
 }
 
 header .logo {
-    font-size: 20px;
-    /*Tamanho da fonte*/
-    color: white;
-    /*Cor da fonte*/
-    text-transform: uppercase;
-    /*Tudo para maíusculo*/
+    width: 30px;
+    height: 30px;
+
 }
 
 .mobile {
-    display: none;
-    /*remover o menu do mobile*/
+    display: none; /*remover o menu do mobile*/
 }
 
 nav.desktop ul {
-    list-style-type: none;
-    /*tirar os círculos*/
+    list-style-type: none; /*tirar os círculos*/
 }
 
 nav.desktop li {
-    text-transform: uppercase;
-    /*Tudo para maíusculo*/
-    display: inline-block;
-    /*alinhar na horizontal*/
-    padding: 0 20px;
-    /*espaçamento interno*/
+    text-transform: uppercase; /*Tudo para maíusculo*/
+    display: inline-block; /*alinhar na horizontal*/
+    padding: 0 20px; /*espaçamento interno*/
 }
 
 nav.desktop a {
@@ -272,6 +264,31 @@ section.erro-404 h2{
 
 section.erro-404 a{
     color: rgb(75, 221, 75);
+}
+
+/*WhatsApp Button*/
+
+.btnWhatsApp{
+    z-index: 999;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgb(75, 221, 75);
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 10px 10px 10px black;
+    animation-name: whatsApp;
+    animation-duration: 6s;
+    animation-iteration-count: 3;
+}
+
+@keyframes whatsApp{
+    from{background-color: rgb(75, 221, 75);}
+    to{background-color: black;}
 }
 
 /*Footer*/
