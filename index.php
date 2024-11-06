@@ -24,7 +24,11 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>assets/css/style.css">
-    <title>Projeto 1</title>
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico" type="image/x-icon">
+
+    <title>IFPR</title>
 </head>
 
 <body>
@@ -47,7 +51,11 @@
     <!--header-->
     <header>
         <div class="center">
-            <div class="logo left">Logomarca</div>
+            <div class="logo left">
+                <a href="<?php echo INCLUDE_PATH;?>">
+                    <img src="<?php echo INCLUDE_PATH;?>ifpr_logo.png" alt="IFPR">
+                </a>
+            </div>
             <nav class="desktop right">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
