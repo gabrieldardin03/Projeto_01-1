@@ -105,6 +105,7 @@
 
     <?php if ($url == 'home' || $url == '' || $url == 'depoimentos' || $url == 'servicos') { ?>
         <script src="<?php echo INCLUDE_PATH; ?>assets/js/slider.js"></script>
+        <script src="<?php echo INCLUDE_PATH; ?>assets/js/especialidades.js"></script>
     <?php } ?>
 
 </body>
