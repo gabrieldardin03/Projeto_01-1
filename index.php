@@ -93,12 +93,7 @@
         }
     }
     ?>
-
-    <!--WhatsApp Button-->
-    <a href="https://wa.me/554221021443" class="btnWhatsApp" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
+    
     <!--footer-->
     <footer <?php if (isset($pagina404) && $pagina404 == true) echo 'class="fixed"'; ?>>
         <div class="center">
@@ -118,6 +113,11 @@
 
     <?php if ($url == 'home' || $url == '' || $url == 'depoimentos' || $url == 'servicos') { ?>
     <script src="<?php echo INCLUDE_PATH; ?>assets/js/slider.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>assets/js/melhorEmail.js"></script>
+    <!--WhatsApp Button-->
+    <a href="https://wa.me/554221021443" class="btnWhatsApp" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     <?php } ?>
 
     <?php if($url == 'home' || $url == ''){ ?>
