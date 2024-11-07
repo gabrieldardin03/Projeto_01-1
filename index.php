@@ -117,9 +117,12 @@
     <script src="<?php echo INCLUDE_PATH; ?>assets/js/scripts.js"></script>
 
     <?php if ($url == 'home' || $url == '' || $url == 'depoimentos' || $url == 'servicos') { ?>
-        <script src="<?php echo INCLUDE_PATH; ?>assets/js/slider.js"></script>
-        <script src="<?php echo INCLUDE_PATH; ?>assets/js/especialidades.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>assets/js/slider.js"></script>
     <?php } ?>
+
+    <?php if($url == 'home' || $url == ''){ ?>
+    <script src="<?php echo INCLUDE_PATH; ?>assets/js/especialidades.js"></script>
+    <?php }?>
 
 </body>
 
