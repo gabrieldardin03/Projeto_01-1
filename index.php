@@ -34,6 +34,10 @@
 <body>
 
     <?php
+        new Email();
+    ?>
+
+    <?php
     //echo $_GET["url"]; printar na tela a url
 
     // Obtendo a url se exister ou home
