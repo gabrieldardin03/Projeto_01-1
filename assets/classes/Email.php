@@ -30,10 +30,6 @@ class Email
         {$mensagem}<br>
         ";
 
-        printf($body);
-        exit;
-
-
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
 
@@ -45,7 +41,8 @@ class Email
             $mail->Username   = '13504359d60600';                     //SMTP username
             $mail->Password   = '1dabb76d5d8395';                               //SMTP password
             //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->Port       = 465;        
+            $mail->CharSet    = 'UTF-8';                            //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
             $mail->setFrom('contato@dominio.com.br', 'Origem');
@@ -53,11 +50,12 @@ class Email
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Assunto';
-            $mail->Body    = 'Corpo do <b>Email!</b>';
+            $mail->Subject = 'Contato: ' .$nome;
+            $mail->Body    = $body;
 
             $mail->send();
-            echo 'Message has been sent';
+            header('location:home');
+
         } catch (Exception $e) {
             echo "Error: {$mail->ErrorInfo}";
         }
