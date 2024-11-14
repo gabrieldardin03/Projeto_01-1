@@ -1,7 +1,7 @@
 <div class="contato-container">
     <div class="center">
         <h2>Contato</h2>
-        <form action="">
+        <form method="post" action="">
             <input type="text" name="nome" id="" placeholder="Nome:">
             <input type="text" name="email" id="" placeholder="E-mail:">
             <input type="text" name="telefone" id="" placeholder="Telefone:">
@@ -10,6 +10,13 @@
         </form>
     </div>
 </div>
+
+<?php
+    if(isset($_POST['btnEnviar'])){
+
+        new email(); // Enviar Email para Mailtrap
+    }
+?>
 
 <!--Manipular no CSS-->
 <div class="map">

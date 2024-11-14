@@ -33,9 +33,6 @@
 
 <body>
 
-    <?php
-        new Email();
-    ?>
 
     <?php
     //echo $_GET["url"]; printar na tela a url

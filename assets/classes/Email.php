@@ -12,6 +12,28 @@ class Email
 
     function __construct()
     {
+        $post = filter_input_array(INPUT_POST);
+        
+        $nome = $post['name'];
+        $email = $post['email'];
+        $telefone = $post['telefone'];
+        $mensagem = $post['mensagem'];
+
+        $body = "<h2>Formulário de Contato:</h2>
+        <strong>Nome: </strong>
+        {$nome}<br>
+        <strong>E-mail: </strong>
+        {$email}<br>
+        <strong>Telefone: </strong>
+        {$telefone}<br>
+        <strong>Mensagem: </strong>
+        {$mensagem}<br>
+        ";
+
+        printf($body);
+        exit;
+
+
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
 
