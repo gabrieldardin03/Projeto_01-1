@@ -14,7 +14,7 @@ class Email
     {
         $post = filter_input_array(INPUT_POST);
         
-        $nome = $post['name'];
+        $nome = $post['nome'];
         $email = $post['email'];
         $telefone = $post['telefone'];
         $mensagem = $post['mensagem'];
