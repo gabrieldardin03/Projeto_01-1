@@ -18,26 +18,26 @@ class Email
         try {
             //Server settings
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+            $mail->Host       = 'sandbox.smtp.mailtrap.io';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'user@example.com';                     //SMTP username
-            $mail->Password   = 'secret';                               //SMTP password
+            $mail->Username   = '13504359d60600';                     //SMTP username
+            $mail->Password   = '1dabb76d5d8395';                               //SMTP password
             //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('from@example.com', 'Mailer');
-            $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
+            $mail->setFrom('contato@dominio.com.br', 'Origem');
+            $mail->addAddress('contato@dominio.com.br', 'Destino');     //Add a recipient
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+            $mail->Subject = 'Assunto';
+            $mail->Body    = 'Corpo do <b>Email!</b>';
 
             $mail->send();
             echo 'Message has been sent';
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "Error: {$mail->ErrorInfo}";
         }
     }
 }
