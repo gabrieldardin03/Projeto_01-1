@@ -9,7 +9,7 @@
     define('HOST', 'localhost'); //Hospedagem
     define('DATABASE', 'projeto_01'); //Banco
     define('USER', 'root'); //Usuario
-    define('PASSWORD', 'senha'); //Senha
+    define('PASSWORD', ''); //Senha
 
     $autoload = function($class){
         include('assets/classes/'.$class.'.php'); // Carregando a classe: 'Email'

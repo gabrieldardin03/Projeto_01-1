@@ -13,11 +13,11 @@ class MySql
                     USER,
                     PASSWORD,
                     array(PDO::MYSQL_ATTR_INIT_COMMAND =>
-                    "SET NAMES uft8")
+                    "SET NAMES utf8")
                 );
                 self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (\Throwable $th) {
-                echo '<h2> Não foi possivel conectar! </h2>';
+                echo '<h2> Não foi possível conectar! </h2>';
             }
         }
         return self::$pdo;
