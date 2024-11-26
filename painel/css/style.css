@@ -49,3 +49,21 @@ html, body{
     color: white;
     font: 18px;
 }
+
+/* Painel de controle */
+.clear{
+    clear:both;
+}
+
+.center{
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+aside{
+    float: left;
+    overflow-y: auto;
+    height: 100%;
+    background-color: rgb(111, 235, 154);
+    width: 250px;
+}
