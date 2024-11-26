@@ -5,6 +5,12 @@
     
     define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'painel/'); // Definir a URL do painel
 
+    //Banco de dados
+    define('HOST', 'localhost'); //Hospedagem
+    define('DATABASE', 'projeto_01'); //Banco
+    define('USER', 'root'); //Usuario
+    define('PASSWORD', ''); //Senha
+    
     $autoload = function($class){
         include('assets/classes/'.$class.'.php'); // Carregando a classe: 'Email'
     };
