@@ -15,6 +15,11 @@
 <body>
 
     <aside>
+        <?php
+            for ($i=0; $i < 100; $i++) { 
+                echo '<h2>Teste</h2>';
+            }
+        ?>
     </aside>
 
     <header>

@@ -67,3 +67,19 @@ aside{
     background-color: rgb(111, 235, 154);
     width: 250px;
 }
+
+header{
+    float: left;
+    padding: 10px 0;
+    background-color: rgb(75, 221, 75);
+    width: calc(100% - 250px);
+}
+
+.logout{
+    float: right;
+}
+
+.logout a{
+    color: white;
+    font-size: 18px;
+}
