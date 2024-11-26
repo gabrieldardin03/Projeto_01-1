@@ -1,3 +1,9 @@
+<?php
+    if(isset($_GET['logout'])){
+        Painel::logout();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en, pt-br">
 
