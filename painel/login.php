@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en, pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL;?>css/style.css">
     <title>Painel de controle</title>
 </head>
+
 <body>
     <div class="box-login">
+        <?php
+        $pdo = MySql::conectar();
+
+        ?>
         <form action="" method="post">
             <input type="text" name="user" placeholder="Login" required>
             <input type="password" name="password" placeholder="Password" required>
@@ -15,4 +21,5 @@
         </form>
     </div>
 </body>
+
 </html>
