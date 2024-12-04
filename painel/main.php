@@ -20,17 +20,16 @@
 
 <body>
 
+    <!--Barra Lateral Esquerda-->
     <aside>
-        <?php
-            for ($i=0; $i < 100; $i++) { 
-                echo '<h2>Teste</h2>';
-            }
-        ?>
     </aside>
 
     <header>
 
         <div class="center">
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="logout">
                 <a href="<?php echo INCLUDE_PATH_PAINEL;?>?logout">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
