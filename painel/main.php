@@ -22,10 +22,19 @@
 
     <!--Barra Lateral Esquerda-->
     <aside>
+        <div class="box-usuario">
+            <div class="avatar-usuario">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="nome-usuario">
+                <h2><?php echo $_SESSION['nome'];?></h2>
+                <p><?php echo pegaCargo($_SESSION['cargo']);?></p>
+            </div>
+        </div>
     </aside>
 
     <header>
-
         <div class="center">
             <div class="menu-btn">
                 <i class="fa-solid fa-bars"></i>
