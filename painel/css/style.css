@@ -13,7 +13,7 @@ body {
 }
 
 .box-login {
-    max-width: 600px;
+    max-width: 600px;   
     width: 90%;
     padding: 20px 2%;
     position: absolute;
@@ -42,6 +42,26 @@ body {
     border: 2px solid black;
 }
 
+.box-login-title {
+    padding: 0 2%;
+    width: 50%;
+}
+
+.box-login-title img {
+    float: left;
+    width: 65%;
+    margin-top: 5px;
+}
+
+.box-login-title h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+.box-login input[type="submit"]:hover {
+    background-color: rgb(38, 168, 34);
+}
+
 .erro-box {
     width: 100%;
     padding: 8px 2%;
@@ -62,11 +82,13 @@ body {
 }
 
 aside {
-    float: left;
+    left: 0;
+    top: 0;
+    position: fixed;
     overflow-y: auto;
     padding: 12px;
     height: 100%;
-    background-color: rgb(22, 151, 67);
+    background-color: rgb(38, 168, 34);
     width: 250px;
 }
 
@@ -92,6 +114,9 @@ div.box-usuario {
     -ms-transform: translate(-50%, -50%);
 }
 
+.imagem-usuario {
+}
+
 .nome-usuario {
     margin-top: 10px;
     color: white;
@@ -103,7 +128,8 @@ div.box-usuario {
 }
 
 header {
-    float: left;
+    position: relative;
+    left: 250px;
     padding: 10px 0;
     background-color: rgb(75, 221, 75);
     width: calc(100% - 250px);
@@ -122,4 +148,24 @@ header {
     float: left;
     cursor: pointer;
     color: white;
+}
+
+.content {
+    width: calc(100% - 250px);
+    left: 250px;
+    position: relative;
+    background-color: lightgray;
+    height: 5000px;
+}
+
+/*Mobile -> Media Query */
+@media screen and (max-width:768px){
+    aside{
+        display: none;
+    }
+
+    header, .content{
+        width: 100%;
+        left: 0;
+    }
 }

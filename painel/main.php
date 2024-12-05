@@ -23,9 +23,16 @@
     <!--Barra Lateral Esquerda-->
     <aside>
         <div class="box-usuario">
+            <?php if($_SESSION['img'] == ''){ ?>
             <div class="avatar-usuario">
                 <i class="fa-solid fa-user"></i>
             </div>
+            <?php }else{ ?>
+
+            <div class="imagem-usuario">
+                <img src="<?php echo INCLUDE_PATH_PAINEL;?>uploads/<?php echo $_SESSION['img'];?>" alt="">
+            </div>
+            <?php } ?>
 
             <div class="nome-usuario">
                 <h2><?php echo $_SESSION['nome'];?></h2>
@@ -49,6 +56,18 @@
         </div>
         <!--center-->
     </header>
+
+    <div class="content">
+
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Jquery -->
+
+    <script src="<?php echo INCLUDE_PATH_PAINEL;?>js/main.js"></script>
 </body>
 
 </html>
