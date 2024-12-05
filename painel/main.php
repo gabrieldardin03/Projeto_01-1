@@ -39,6 +39,22 @@
                 <p><?php echo pegaCargo($_SESSION['cargo']);?></p>
             </div>
         </div>
+
+        <div class="items-menu">
+            <h2>Cadastro</h2>
+            <a href="">Slide</a>
+            <a href="">Depoimentos</a>
+            <a href="">Serviços</a>
+            <h2>Gestão</h2>
+            <a href="">Slide</a>
+            <a href="">Depoimentos</a>
+            <a href="">Serviços</a>
+            <h2>Usuário</h2>
+            <a href="">Editar</a>
+            <a href="">Adicionar</a>
+            <h2>Configuração</h2>
+            <a href="">Editar</a>
+        </div>
     </aside>
 
     <header>
