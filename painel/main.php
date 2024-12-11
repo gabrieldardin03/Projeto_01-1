@@ -43,7 +43,7 @@ if (isset($_GET['logout'])) {
         <div class="items-menu">
             <h2>Cadastro</h2>
             <a href="">Slide</a>
-            <a href="">Depoimentos</a>
+            <a href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-depoimento">Depoimentos</a>
             <a href="">Serviços</a>
             <h2>Gestão</h2>
             <a href="">Slide</a>
@@ -68,14 +68,25 @@ if (isset($_GET['logout'])) {
                 </a>
             </div>
             <!--logout-->
+
+            <div class="home-btn">
+                <a href="<?php echo INCLUDE_PATH_PAINEL; ?>">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                </a>
+            </div>
+            <!--home-btn-->
+
             <div class="clear"></div>
         </div>
         <!--center-->
     </header>
 
     <div class="content">
-
+        <?php
+            Painel::loadPage();
+        ?>
     </div>
+    <!--content-->
 
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
