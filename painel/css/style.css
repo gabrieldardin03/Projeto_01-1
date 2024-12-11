@@ -165,10 +165,67 @@ header {
     color: white;
 }
 
+/*Conteúdo principal do painel*/
+/*Boot CSS*/
+.w100{
+    width: 100%;
+}
+
+.w50{
+    width: 49%;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
 .content {
     width: calc(100% - 250px);
     left: 250px;
     position: relative;
+}
+
+.box-content {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.box-content h2 {
+    font-weight: 300;
+    font: 23px;
+}
+
+/*Box Métricas*/
+.box-metricas{
+    margin-top: 12px;
+    text-align: center;
+}
+
+.box-metrica-single{
+    float: left;
+    position: relative;
+    width: 33.3%;
+    padding-top: 10px;
+    min-height: 80px;
+    background-color: rgb(75, 221, 75);
+    border: 5px solid white;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(2){
+    background-color: yellow;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(3){
+    background-color: red;
 }
 
 .items-menu {
@@ -202,5 +259,9 @@ header {
     .content {
         width: 100%;
         left: 0;
+    }
+
+    .box-metrica-single{
+        width: 100%;
     }
 }

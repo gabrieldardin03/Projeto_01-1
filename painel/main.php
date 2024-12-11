@@ -1,7 +1,7 @@
 <?php
-    if(isset($_GET['logout'])){
-        Painel::logout();
-    }
+if (isset($_GET['logout'])) {
+    Painel::logout();
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL;?>css/style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>css/style.css">
     <title>Painel de controle</title>
 </head>
 
@@ -23,20 +23,20 @@
     <!--Barra Lateral Esquerda-->
     <aside>
         <div class="box-usuario">
-            <?php if($_SESSION['img'] == ''){ ?>
+            <?php if ($_SESSION['img'] == '') { ?>
             <div class="avatar-usuario">
                 <i class="fa-solid fa-user"></i>
             </div>
-            <?php }else{ ?>
+            <?php } else { ?>
 
             <div class="imagem-usuario">
-                <img src="<?php echo INCLUDE_PATH_PAINEL;?>uploads/<?php echo $_SESSION['img'];?>" alt="">
+                <img src="<?php echo INCLUDE_PATH_PAINEL; ?>uploads/<?php echo $_SESSION['img']; ?>" alt="">
             </div>
             <?php } ?>
 
             <div class="nome-usuario">
-                <h2><?php echo $_SESSION['nome'];?></h2>
-                <p><?php echo pegaCargo($_SESSION['cargo']);?></p>
+                <h2><?php echo $_SESSION['nome']; ?></h2>
+                <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
             </div>
         </div>
 
@@ -63,7 +63,7 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="logout">
-                <a href="<?php echo INCLUDE_PATH_PAINEL;?>?logout">
+                <a href="<?php echo INCLUDE_PATH_PAINEL; ?>?logout">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                 </a>
             </div>
@@ -74,7 +74,23 @@
     </header>
 
     <div class="content">
-
+        <div class="box-content left w100">
+            <h2><i class="fa-solid fa-house"></i>Painel de Controle - <?php echo $nomeEmpresa ?></h2>
+            <div class="box-metricas">
+                <div class="box-metrica-single">
+                    <h2>Usuários Online</h2>
+                    <p>10</p>
+                </div>
+                <div class="box-metrica-single">
+                    <h2>Visitas Hoje</h2>
+                    <p>20</p>
+                </div>
+                <div class="box-metrica-single">
+                    <h2>Visitas Totais</h2>
+                    <p>30</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Jquery -->
@@ -83,7 +99,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Jquery -->
 
-    <script src="<?php echo INCLUDE_PATH_PAINEL;?>js/main.js"></script>
+    <script src="<?php echo INCLUDE_PATH_PAINEL; ?>js/main.js"></script>
 </body>
 
 </html>

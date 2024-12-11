@@ -1,5 +1,7 @@
 <?php
-    session_start(); // Cria uma sessão ou retorna a atual com base em um identificador passado por meio de uma solicitação GET ou POST ou passado por meio de um cookie 
+    session_start(); // Cria uma sessão ou retorna a atual com base em um identificador passado por meio de uma solicitação GET ou POST ou passado por meio de um cookie
+    
+    $nomeEmpresa = 'IFPR';
 
     define('INCLUDE_PATH', 'http://localhost/Projeto_01/'); // Definir o domínio do site
     
