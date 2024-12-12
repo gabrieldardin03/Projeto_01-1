@@ -1,3 +1,5 @@
+<?php $usuariosOnline = Painel::listUserOnline(); ?>
+
 <div class="box-content left w100">
     <h2><i class="fa-solid fa-house"></i> Painel de Controle - <?php echo NOME_EMPRESA;?></h2>
     <div class="box-metricas">
@@ -33,6 +35,10 @@
             <div class="clear"></div>
         </div>
         <!--row-->
+
+        <?php foreach ($s as $key => $value) {
+            # code...
+        } ?>
 
         <!--Exemplo de inputs-->
         <div class="row">
