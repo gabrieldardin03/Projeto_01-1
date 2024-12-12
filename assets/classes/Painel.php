@@ -33,5 +33,17 @@
             $sql->execute();
             return $sql->fetchAll();
         }
+
+        public static function getUserTotal(){
+            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.visitas`");
+            $sql->execute();
+            return $sql->rowCount();
+        }
+
+        public static function getUserTotalToday(){
+            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.visitas` WHERE dia = ?");
+            $sql->execute(array(date('Y-m-d')));
+            return $sql->rowCount();
+        }
     }
 ?>

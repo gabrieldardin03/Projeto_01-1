@@ -1,4 +1,6 @@
 <?php $usuariosOnline = Painel::listUserOnline(); ?>
+<?php $getUserTotal = Painel::getUserTotal();?>
+<?php $getUserTotalToday = Painel::getUserTotalToday();?>
 
 <div class="box-content left w100">
     <h2><i class="fa-solid fa-house"></i> Painel de Controle - <?php echo NOME_EMPRESA;?></h2>
@@ -9,11 +11,11 @@
         </div>
         <div class="box-metrica-single">
             <h2>Visitas Hoje</h2>
-            <p>20</p>
+            <p><?php echo $getUserTotalToday;?></p>
         </div>
         <div class="box-metrica-single">
             <h2>Visitas Totais</h2>
-            <p>30</p>
+            <p><?php echo $getUserTotal;?></p>
         </div>
     </div>
     <!--box-metricas-->

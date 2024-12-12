@@ -20,5 +20,14 @@
                 $sql->execute(array($ip, $horarioAtual, $token));
             }
         }
+
+        public static function countUser(){
+            if(isset($_COOKIE['visita'])){
+                $ip = $_SERVER['REMOTE_ADDR'];
+                setcookie('visita', true, time()+(60*60*24*30));
+                $sql = MySql::conectar()->prepare("INSERT INTO `tb_admin.visitas` VALUES (null,?,?)");
+                $sql->execute(array($ip, date('Y-m-d')));
+            }
+        }
     }
 ?>
