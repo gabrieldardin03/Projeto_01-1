@@ -5,7 +5,7 @@
     <div class="box-metricas">
         <div class="box-metrica-single">
             <h2>Usuários Online</h2>
-            <p>10</p>
+            <p><?php echo count($usuariosOnline);?></p>
         </div>
         <div class="box-metrica-single">
             <h2>Visitas Hoje</h2>
@@ -36,23 +36,22 @@
         </div>
         <!--row-->
 
-        <?php foreach ($s as $key => $value) {
-            # code...
-        } ?>
+        <?php foreach ($usuariosOnline as $key => $value) {?>
 
         <!--Exemplo de inputs-->
         <div class="row">
             <div class="col left w50">
-                <h2>127.0.0.0</h2>
+                <h2><?php echo $value['ip'];?></h2>
             </div>
             <!--col-->
             <div class="col left w50">
-                <h2>11/12/2024 20:43:00</h2>
+                <h2><?php echo date('d/m/Y H:i:s', strtotime($value['ultima_acao']));?></h2>
             </div>
             <!--col-->
             <div class="clear"></div>
         </div>
         <!--row-->
+        <?php }?>
     </div>
     <!--table-responsive-->
 </div>
