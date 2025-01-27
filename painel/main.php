@@ -50,7 +50,7 @@ if (isset($_GET['logout'])) {
             <a href="">Depoimentos</a>
             <a href="">Serviços</a>
             <h2>Usuário</h2>
-            <a href="">Editar</a>
+            <a href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuario">Editar</a>
             <a href="">Adicionar</a>
             <h2>Configuração</h2>
             <a href="">Editar</a>

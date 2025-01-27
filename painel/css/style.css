@@ -214,6 +214,34 @@ header {
     font: 23px;
 }
 
+.box-content form{
+    margin: 30px;
+}
+
+.box-content .form-group{
+    margin: 20px 0;
+}
+
+.box-content form input[type="text"],
+.box-content form input[type="password"],
+.box-content form input[type="file"]{
+    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.box-content form input[type="submit"]{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgba(1, 99, 1, 0.823);
+    cursor: pointer;
+    color: white;
+    box-shadow: 1px 1px 10px rgba(1, 99, 1, 0.823);
+}
+
 /*Box Métricas*/
 .box-metricas{
     margin-top: 12px;
