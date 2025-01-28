@@ -9,6 +9,8 @@
     
     define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'painel/'); // Definir a URL do painel
 
+    define('BASE_DIR_PAINEL', __DIR__.'/painel/'); // Diretório base as imagens
+
     //Banco de dados
     define('HOST', 'localhost'); //Hospedagem
     define('DATABASE', 'projeto_01'); //Banco
@@ -29,5 +31,32 @@
             '2' => 'Administrador'
         ];
         return $vetor[$cargo];
+    }
+
+    // Função para o menu selecionado
+    function selecionaMenu($menuItem){
+        $url = explode('/',@$_GET['url'])[0];
+        if($url == $menuItem){
+            echo 'class="menu-active"';
+        }
+    }
+
+    // Função para verificar a permissão do usuário
+    function verificaPermissaoMenu($permissao){
+        if($_SESSION['cargo'] >= $permissao){
+            return true;
+        }else{
+            echo 'style="display:none"';
+        }
+    }
+
+    // Função para verificar a permissão para exibir a página na url
+    function verificaPermissaoPagina($permissao){
+        if($_SESSION['cargo'] >= $permissao){
+            return true;
+        }else{
+            include('painel/pages/permissao_negada.php');
+            die();
+        }
     }
 ?>

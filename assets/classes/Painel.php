@@ -53,5 +53,31 @@
                 echo '<div class="box-alert erro"><i class="fa-solid fa-times"></i> '.$message.'</div>';
             }
         }
+
+        public static function validImage($image){
+            if($image['type'] == 'image/jpeg' ||
+                $image['type'] == 'image/jpg' ||
+                $image['type'] == 'image/png'){
+
+                $size = intval($image['size']/1024);
+                if($size < 500){
+                    return true;
+                }else{
+                    Painel::messageToUser('erro', 'O tamanho do arquivo precisa ser menor do que 500 kb');
+                }
+            }
+            return false;
+        }
+
+        public static function uploadFile($file){
+            if(move_uploaded_file($file['tmp_name'], BASE_DIR_PAINEL.'uploads/'.$file['name']))
+                return $file['name'];
+            return false;
+        }
+
+        public static function deleteFile($file){
+            //@unlink(BASE_DIR_PAINEL.'uploads/'.$file');
+            @unlink('uploads/'.$file);
+        }
     }
 ?>
