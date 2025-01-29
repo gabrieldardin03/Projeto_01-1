@@ -48,7 +48,8 @@ if (isset($_GET['logout'])) {
             <a <?php selecionaMenu('cadastrar-servico')?> href="">Serviço</a>
             <h2>Gestão</h2>
             <a <?php selecionaMenu('listar-slides')?> href="">Slide</a>
-            <a <?php selecionaMenu('listar-depoimentos')?> href="">Depoimentos</a>
+            <a <?php selecionaMenu('listar-depoimentos')?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>listar-depoimentos">Depoimentos</a>
             <a <?php selecionaMenu('listar-servicos')?> href="">Serviço</a>
             <h2>Usuário</h2>
             <a <?php selecionaMenu('editar-usuario')?>
@@ -73,7 +74,8 @@ if (isset($_GET['logout'])) {
             <!--logout-->
 
             <div class="home-btn">
-                <a href="<?php echo INCLUDE_PATH_PAINEL; ?>">
+                <a <?php if (@$_GET['url'] == '') { ?> style="color:black;" <?php } ?>
+                    href="<?php echo INCLUDE_PATH_PAINEL; ?>">
                     <i class="fa-solid fa-house" aria-hidden="true"></i>
                 </a>
             </div>
@@ -98,6 +100,7 @@ if (isset($_GET['logout'])) {
     <!-- Jquery -->
 
     <script src="<?php echo INCLUDE_PATH_PAINEL; ?>js/main.js"></script>
-</body>
+    <script src="<?php echo INCLUDE_PATH_PAINEL; ?>js/jquery_mask.js"></script>
 
+</body>
 </html>

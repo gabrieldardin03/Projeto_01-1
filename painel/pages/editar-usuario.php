@@ -1,5 +1,5 @@
 <div class="box-content">
-    <h2><i class="fas fa-edit"></i>Editar Usuário</h2>
+    <h2><i class="fas fa-edit"></i> Editar Usuário</h2>
 
     <form method="post" enctype="multipart/form-data">
         <?php 
@@ -48,7 +48,7 @@
         <div class="form-group">
             <label for="imagem">Imagem: </label>
             <input type="file" name="imagem">
-            <input type="hidden" name="imagem-atual" value="<?php echo $_SESSION['img']; ?>">
+            <input type="hidden" name="imagem_atual" value="<?php echo $_SESSION['img']; ?>">
         </div>
         <!--form group-->
         <div class="form-group">
