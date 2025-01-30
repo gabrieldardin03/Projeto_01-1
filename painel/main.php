@@ -42,12 +42,14 @@ if (isset($_GET['logout'])) {
 
         <div class="items-menu">
             <h2>Cadastro</h2>
-            <a <?php selecionaMenu('cadastrar-slide')?> href="">Slide</a>
+            <a <?php selecionaMenu('cadastrar-slide')?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-slide">Slide</a>
             <a <?php selecionaMenu('cadastrar-depoimento')?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-depoimento">Depoimentos</a>
-            <a <?php selecionaMenu('cadastrar-servico')?> href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-servico">Serviço</a>
+            <a <?php selecionaMenu('cadastrar-servico')?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-servico">Serviço</a>
             <h2>Gestão</h2>
-            <a <?php selecionaMenu('listar-slides')?> href="">Slide</a>
+            <a <?php selecionaMenu('listar-slides')?> href="<?php echo INCLUDE_PATH_PAINEL;?>listar-slides">Slide</a>
             <a <?php selecionaMenu('listar-depoimentos')?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>listar-depoimentos">Depoimentos</a>
             <a <?php selecionaMenu('listar-servicos')?>
@@ -58,7 +60,7 @@ if (isset($_GET['logout'])) {
             <a <?php selecionaMenu('adicionar-usuario')?> <?php verificaPermissaoMenu(2) ?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>adicionar-usuario">Adicionar</a>
             <h2>Configuração</h2>
-            <a <?php selecionaMenu('editar')?> href="">Editar</a>
+            <a <?php selecionaMenu('editar');?> href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-site">Editar</a>
         </div>
     </aside>
 
