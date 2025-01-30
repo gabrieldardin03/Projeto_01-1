@@ -45,12 +45,13 @@ if (isset($_GET['logout'])) {
             <a <?php selecionaMenu('cadastrar-slide')?> href="">Slide</a>
             <a <?php selecionaMenu('cadastrar-depoimento')?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-depoimento">Depoimentos</a>
-            <a <?php selecionaMenu('cadastrar-servico')?> href="">Serviço</a>
+            <a <?php selecionaMenu('cadastrar-servico')?> href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-servico">Serviço</a>
             <h2>Gestão</h2>
             <a <?php selecionaMenu('listar-slides')?> href="">Slide</a>
             <a <?php selecionaMenu('listar-depoimentos')?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>listar-depoimentos">Depoimentos</a>
-            <a <?php selecionaMenu('listar-servicos')?> href="">Serviço</a>
+            <a <?php selecionaMenu('listar-servicos')?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>listar-servicos">Serviço</a>
             <h2>Usuário</h2>
             <a <?php selecionaMenu('editar-usuario')?>
                 href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuario">Editar</a>

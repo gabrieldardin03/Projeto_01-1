@@ -28,7 +28,7 @@
         </div>
         <!--form group-->
         <div class="form-group">
-            <label for="nome">Depoimento: </label>
+            <label for="depoimento">Depoimento: </label>
             <textarea name="depoimento"><?php echo $depoimento['depoimento']?></textarea>
         </div>
         <!--form group-->

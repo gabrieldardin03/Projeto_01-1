@@ -95,44 +95,37 @@
                 $sql = MySql::conectar()->prepare("SELECT * FROM `tb.admin.depoimentos` ORDER BY order_id DESC LIMIT 3");
                 $sql->execute();
                 $depoimentos = $sql->fetchAll();
-                foreach ($depoimentos as $key => $value){ ?>
-                <div class="depoimento-single">
-                    <p class="depoimento-descricao">
-                        <?php echo $value['depoimento']; ?>
-                    </p>
-                    <p class="nome-autor"><?php echo $value['nome']; ?> - <?php echo $value['data']; ?></p>
-                </div>
-                <!--depoimentos-single-->
+                foreach ($depoimentos as $key => $value) {?>
+            <div class="depoimento-single">
+                <p class="depoimento-descricao">
+                    <?php echo $value['depoimento']; ?>
+                </p>
+                <p class="nome-autor"><?php echo $value['nome']; ?> - <?php echo $value['data']; ?></p>
+            </div>
+            <!--depoimentos-single-->
             <?php } ?>
-        <div class="clear"></div>
-        <!--clear float-->
+            <div class="clear"></div>
+            <!--clear float-->
         </div>
         <!--depoimentos-->
         <div id="servicos" class="w50 left servicos-container">
             <h2 class="title">Serviços</h2>
             <div class="servicos">
+                <?php 
+                    $sql = MySql::conectar()->prepare("SELECT * FROM `tb.admin.servicos` ORDER BY order_id DESC LIMIT 3");
+                    $sql->execute();
+                    $depoimentos = $sql->fetchAll();
+                    ?>
                 <ul>
-                    <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ipsum eveniet, ratione magnam repellendus nobis vitae
-                        laborum fugiat deleniti omnis harum eius hic inventore
-                        asperiores, explicabo nisi unde optio eos magni.
-                    </li>
-                    <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ipsum eveniet, ratione magnam repellendus nobis vitae
-                        laborum fugiat deleniti omnis harum eius hic inventore
-                        asperiores, explicabo nisi unde optio eos magni.
-                    </li>
-                    <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ipsum eveniet, ratione magnam repellendus nobis vitae
-                        laborum fugiat deleniti omnis harum eius hic inventore
-                        asperiores, explicabo nisi unde optio eos magni.
-                    </li>
+                    <?php foreach ($depoimentos as $key => $value) {?>
+                        <li>
+                            <?php echo $value['servico'];?>
+                        </li>
+                    <?php }?>
                 </ul>
             </div>
         </div>
+        <!--servicos-->
         <div class="clear"></div>
         <!--clear float-->
     </div>
