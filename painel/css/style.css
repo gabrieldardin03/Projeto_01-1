@@ -321,6 +321,11 @@ header {
 }
 
 /* Table listar-depoimentos */
+
+.wraper-table{
+    overflow: auto;
+}
+
 table{
     margin: 20px 0;
     width: 100%;
@@ -347,6 +352,35 @@ table td{
 
 .delete{
     color: rgb(185, 9, 9);
+}
+
+.order-up{
+    color: rgb(38, 168, 34);
+}
+
+.order-down{
+    color: rgb(185, 9, 9);
+}
+
+/* Paginação */
+.paginacao{
+    margin: 10px 0;
+    text-align: center;
+}
+
+.paginacao a{
+    font: 14px;
+    margin: 0 8px;
+    display: inline-block;
+    padding: 4px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+.paginacao a.page-selected{
+    background-color: black;
+    color: white;
 }
 
 .items-menu {

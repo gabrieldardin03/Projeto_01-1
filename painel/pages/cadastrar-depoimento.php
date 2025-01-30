@@ -23,11 +23,12 @@
         <!--form group-->
         <div class="form-group">
             <label for="nome">Data: </label>
-            <input formato="data" type="text" name="data">
+            <input formato="data" type="text" name="data" required>
         </div>
         <!--form group-->
         <div class="form-group">
-            <input type="hidden" name="acao" value="tb_admin.depoimentos">
+            <input type="hidden" name="order_id" value="0">
+            <input type="hidden" name="nomeTabela" value="tb_admin.depoimentos">
             <input type="submit" name="acao" value="Cadastrar">
         </div>
         <!--form group-->
