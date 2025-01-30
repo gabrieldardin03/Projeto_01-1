@@ -1,7 +1,7 @@
 <?php
     if(isset($_GET['id'])){
         $id = (int) $_GET['id'];
-        $depoimento = Painel::get('tb.admin.depoimentos', 'id = ?', array($id));
+        $depoimento = Painel::get('tb_admin.depoimentos', 'id = ?', array($id));
     }else{
         Painel::messageToUser('erro', 'ID não existe');
         die();
@@ -16,7 +16,7 @@
         if (isset($_POST['acao'])){
             if(Painel::update($_POST)){
                 Painel::messageToUser('sucesso', 'Depoimento editado com sucesso!');
-                $depoimento = Painel::get('tb.admin.depoimentos', 'id = ?', array($id));
+                $depoimento = Painel::get('tb_admin.depoimentos', 'id = ?', array($id));
             }else{
                 Painel::messageToUser('erro', 'Campos vazios não são permitidos');
             }

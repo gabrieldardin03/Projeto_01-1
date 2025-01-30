@@ -1,10 +1,10 @@
 <?php
     if(isset($_GET['excluir'])){
         $idExcluir = intval($_GET['excluir']);
-        Painel::delete('tb.admin.servicos', $idExcluir);
+        Painel::delete('tb_admin.servicos', $idExcluir);
         Painel::redirect(INCLUDE_PATH_PAINEL.'listar-servicos');
     }else if(isset($_GET['order']) && isset($_GET['id'])){
-        Painel::orderItem('tb.admin.servicos', $_GET['order'], $_GET['id']);
+        Painel::orderItem('tb_admin.servicos', $_GET['order'], $_GET['id']);
     }
 
 $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
@@ -24,7 +24,7 @@ $depoimentos = Painel::getAll('tb_admin.servicos', ($paginaAtual - 1) * $porPagi
                 <td>Descer</td>
                 <td>Subir</td>
             </tr>
-            <?php foreach ($servicos as $key => $value) { ?>
+            <?php foreach (@$servicos as $key => $value) { ?>
             <tr>
                 <td><?php echo $value['servico']; ?></td>
                 <td><a class="edit" href="<?php echo INCLUDE_PATH_PAINEL ?>editar-servico?id=<?php echo $value['id']; ?>"><i class="fas fa-edit"></i></a></td>
@@ -39,7 +39,7 @@ $depoimentos = Painel::getAll('tb_admin.servicos', ($paginaAtual - 1) * $porPagi
 
     <div class="paginacao">
         <?php 
-            $totalPaginas = ceil(count(Painel::getAll('tb.admin.servicos')) / $porPagina);
+            $totalPaginas = ceil(count(Painel::getAll('tb_admin.servicos')) / $porPagina);
             for ($i = 1; $i <= $totalPaginas ; $i++){
                 if($i == $paginaAtual)
                     echo '<a class="page-selected" href="' . INCLUDE_PATH_PAINEL . 'listar-servicos?pagina=' . $i . '">'.$i.'</a';

@@ -1,10 +1,10 @@
 <?php
     if(isset($_GET['excluir'])){
         $idExcluir = intval($_GET['excluir']);
-        Painel::delete('tb.admin.depoimentos', $idExcluir);
+        Painel::delete('tb_admin.depoimentos', $idExcluir);
         Painel::redirect(INCLUDE_PATH_PAINEL.'listar-depoimentos');
     }else if(isset($_GET['order']) && isset($_GET['id'])){
-        Painel::orderItem('tb.admin.depoimentos', $_GET['order'], $_GET['id']);
+        Painel::orderItem('tb_admin.depoimentos', $_GET['order'], $_GET['id']);
     }
 
 $paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
@@ -25,7 +25,7 @@ $depoimentos = Painel::getAll('tb_admin.depoimentos', ($paginaAtual - 1) * $porP
                 <td>Descer</td>
                 <td>Subir</td>
             </tr>
-            <?php foreach ($depoimentos as $key => $value) { ?>
+            <?php foreach (@$depoimentos as $key => $value) { ?>
             <tr>
                 <td><?php echo $value['data']; ?></td>
                 <td><?php echo $value['nome']; ?></td>
@@ -41,7 +41,7 @@ $depoimentos = Painel::getAll('tb_admin.depoimentos', ($paginaAtual - 1) * $porP
 
     <div class="paginacao">
         <?php 
-            $totalPaginas = ceil(count(Painel::getAll('tb.admin.depoimentos')) / $porPagina);
+            $totalPaginas = ceil(count(Painel::getAll('tb_admin.depoimentos')) / $porPagina);
             for ($i = 1; $i <= $totalPaginas ; $i++){
                 if($i == $paginaAtual)
                     echo '<a class="page-selected" href="' . INCLUDE_PATH_PAINEL . 'listar-depoimentos?pagina=' . $i . '">'.$i.'</a';
