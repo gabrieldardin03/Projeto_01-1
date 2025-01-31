@@ -42,18 +42,28 @@ if (isset($_GET['logout'])) {
 
         <div class="items-menu">
             <h2>Cadastro</h2>
-            <a <?php selecionaMenu('cadastrar-slide')?>
+            <a <?php selecionaMenu('cadastrar-slide');?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-slide">Slide</a>
-            <a <?php selecionaMenu('cadastrar-depoimento')?>
+            <a <?php selecionaMenu('cadastrar-depoimento');?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-depoimento">Depoimentos</a>
-            <a <?php selecionaMenu('cadastrar-servico')?>
+            <a <?php selecionaMenu('cadastrar-servico');?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-servico">Serviço</a>
+            <a <?php selecionaMenu('cadastrar-categoria');?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-categoria">Categoria</a>
+            <a <?php selecionaMenu('cadastrar-noticia');?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>cadastrar-noticia">Notícia</a>
+
             <h2>Gestão</h2>
-            <a <?php selecionaMenu('listar-slides')?> href="<?php echo INCLUDE_PATH_PAINEL;?>listar-slides">Slide</a>
-            <a <?php selecionaMenu('listar-depoimentos')?>
+            <a <?php selecionaMenu('listar-slides');?> href="<?php echo INCLUDE_PATH_PAINEL;?>listar-slides">Slide</a>
+            <a <?php selecionaMenu('listar-depoimentos');?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>listar-depoimentos">Depoimentos</a>
-            <a <?php selecionaMenu('listar-servicos')?>
+            <a <?php selecionaMenu('listar-servicos');?>
                 href="<?php echo INCLUDE_PATH_PAINEL;?>listar-servicos">Serviço</a>
+            <a <?php selecionaMenu('listar-categorias');?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>listar-categorias">Categorias</a>
+            <a <?php selecionaMenu('listar-noticias');?>
+                href="<?php echo INCLUDE_PATH_PAINEL;?>listar-noticias">Notícias</a>
+
             <h2>Usuário</h2>
             <a <?php selecionaMenu('editar-usuario')?>
                 href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-usuario">Editar</a>
