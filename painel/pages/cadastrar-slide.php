@@ -1,5 +1,5 @@
 <div class="box-content">
-    <h2><i class="fas fa-edit"></i> Adicionar Slide</h2>
+    <h2><i class="fas fa-plus"></i> Adicionar Slide</h2>
 
     <form method="post" enctype="multipart/form-data">
 
